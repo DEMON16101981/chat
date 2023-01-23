@@ -1,49 +1,49 @@
 <?php
-   session_start();
-   if (isset($_SESSION['unique_id'])) {
-      header("location: users.php");
-   }
+session_start();
+if (isset($_SESSION['unique_id'])) {
+   header("location: users.php");
+}
 ?>
 
 <?php
-   include_once "header.php"
+include_once "header.php"
 ?>
 
 <body>
    <div class="wrapper">
       <section class="form signup">
-         <header>Realtime Chat App</header>
+         <header>Приложение для чата в реальном времени</header>
          <form action="#" enctype="multipart/form-data" autocomplete="off">
             <div class="error-txt"></div>
             <div class="name-details">
                <div class="field input">
-                  <label>First Name</label>
-                  <input type="text" name="fname" placeholder="First Name" required>
+                  <label>Имя</label>
+                  <input type="text" name="fname" placeholder="Имя" required>
                </div>
                <div class="field input">
-                  <label>Last Name</label>
-                  <input type="text" name="lname" placeholder="Last Name" required>
+                  <label>Фамилия</label>
+                  <input type="text" name="lname" placeholder="Фамилия" required>
                </div>
             </div>
             <div class="field input">
-               <label>Email Address</label>
-               <input type="text" name="email" placeholder="Enter your email" required>
+               <label>Электронная почта</label>
+               <input type="text" name="email" placeholder="Введите адрес электронной почты" required>
             </div>
             <div class="field input">
-               <label>Password</label>
-               <input type="password" name="password" placeholder="Enter new password" required>
+               <label>Пароль</label>
+               <input type="password" name="password" placeholder="Введите новый пароль" required>
                <i class="fas fa-eye"></i>
             </div>
             <div class="field image">
-               <label>Select Image</label>
+               <label>Выберите изображение</label>
                <input type="file" name="image" placeholder="Выберите файл" required>
             </div>
             <div class="field button">
-               <input type="submit" value="Continue to Chat">
+               <input type="submit" value="Регистрация">
             </div>
 
          </form>
-         <div class="link">Already signed up? <a href="login.php">Login now</a>
+         <div class="link">Уже зарегистрированы ? <a href="login.php">Войти</a>
          </div>
       </section>
    </div>

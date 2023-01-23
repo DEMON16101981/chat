@@ -12,7 +12,7 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
       $sql = mysqli_query($conn, "SELECT email FROM users WHERE email = '{$email}'");
       if(mysqli_num_rows($sql) > 0){
-         echo "$email - This email already exists";
+         echo "$email - Этот адрес электронной почты уже существует";
       }else{
          if(isset($_FILES['image'])){
             $img_name = $_FILES['image']['name'];
@@ -28,7 +28,7 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                $new_img_name = $time.$img_name;
 
                if(move_uploaded_file($tmp_name, "images/".$new_img_name)){
-                  $status = "Active now";
+                  $status = "В сети";
                   $random_id = rand(time(), 10000000);
                
                   $sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, fname, lname, email, password, img, status)
@@ -41,21 +41,21 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($password)){
                         echo "success";
                      }
                   }else{
-                     echo "Something went wrong";
+                     echo "Что-то пошло не так";
                   }
                }
 
             }else{
-               echo "Please select an Image file - jpeg, jpg, png";
+               echo "Пожалуйста, выберите файл изображения - jpeg, jpg, png";
             }
 
          }else{
-            echo "Please select an Image file";
+            echo "Пожалуйста, выберите файл изображения";
          }
       }
    }else{
-      echo "$email - This is not a valid email! ";
+      echo "$email - Это недействительный адрес электронной почты! ";
    }
 }else{
-   echo "All input field are required!";
+   echo "Все поля ввода обязательны!";
 }

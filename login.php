@@ -12,26 +12,26 @@ include_once "header.php"
 <body>
    <div class=" wrapper">
       <section class="form login">
-         <header>Realtime Chat App</header>
+         <header>Приложение для чата в реальном времени</header>
          <form action="#" autocomplete="off">
             <div class="error-txt"></div>
 
             <div class="field input">
-               <label>Email Address</label>
-               <input type="text" name="email" placeholder="Enter your email">
+               <label>Электронная почта</label>
+               <input type="text" name="email" placeholder="Введите адрес электронной почты">
             </div>
             <div class="field input">
-               <label>Password</label>
-               <input type="password" name="password" placeholder="Enter your password">
+               <label>Пароль</label>
+               <input type="password" name="password" placeholder="Введите ваш пароль">
                <i class="fas fa-eye"></i>
             </div>
             <div class="field button">
-               <input type="submit" value="Continue to Chat">
+               <input type="submit" value="Подключиться">
             </div>
 
          </form>
 
-         <div class="link">Not yet signed up? <a href="index.php">Signup now</a>
+         <div class="link">Еще не зарегистрировались? <a href="index.php">Регистрация</a>
          </div>
       </section>
    </div>

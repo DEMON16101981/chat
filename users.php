@@ -21,17 +21,17 @@ include_once "header.php";
                   $row = mysqli_fetch_assoc($sql);
                }
                ?>
-                  <img src="php/images/<?php echo $row['img']; ?>" alt="">
-                  <div class="details">
-                     <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
-                     <p><?php echo $row['status'] ?></p>
-                  </div>
+               <img src="php/images/<?php echo $row['img']; ?>" alt="">
+               <div class="details">
+                  <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
+                  <p><?php echo $row['status'] ?></p>
                </div>
-               <a href="php/logout.php?logout_id=<?php echo $row['unique_id'] ?>" class="logout">Logout</a>
+            </div>
+            <a href="php/logout.php?logout_id=<?php echo $row['unique_id'] ?>" class="logout">Выйти</a>
          </header>
          <div class="search">
-            <span class="text">Select an user to start chat</span>
-            <input type="text" placeholder="Enter name to search...">
+            <span class="text">Выберите пользователя, чтобы начать чат</span>
+            <input type="text" placeholder="Введите имя для поиска...">
             <button><i class="fas fa-search"></i></button>
          </div>
          <div class="users-list">
